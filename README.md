@@ -1,4 +1,4 @@
-# Crawler for pulling PTB (PriceToBeat) data of Polymarket Crypto UpDown.
+# Polymarket 5-Minute Up/Down Outcome Scraper
 
 A tiny, dependency-light, well-documented reference for reading the **early
 "Outcome: Up / Down" signal** of Polymarket's 5-minute crypto up/down markets
