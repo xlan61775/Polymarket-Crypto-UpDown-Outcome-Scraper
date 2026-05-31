@@ -82,6 +82,16 @@ asyncio.run(main())
 - If Polymarket changes its markup, update the regex in
   `_OUTCOME_DOM_PROBE_JS` — that's the one place the parsing lives.
 
+## Need more? (PRO & PTB versions)
+
+This repo is the **minimal, tutorial-style reference**: 5-minute BTC/ETH/SOL/XRP outcome, no dependencies beyond Playwright, read it top to bottom to understand *how* it works. If you've outgrown it, two ready-to-run builds pick up where it stops:
+
+**➡️ [PTB & Outcome Scraper — PRO](https://bluewhalequantlab.gumroad.com/l/polymarket-settled-outcome-up-or-down)** — the full version: **all timeframes (`5m`/`15m`/`1h`/`4h`/`1d`) and all coins** (BTC, ETH, SOL, XRP, DOGE + extendable), with the complete slug factory for the tricky Eastern-Time-aligned `1h`/`4h`/`1d` markets that plain timestamps can't build. Returns PTB, Outcome, and Final Price as a clean object.
+
+**➡️ [T0 Price-To-Beat Resolver](https://bluewhalequantlab.gumroad.com/l/polymarket-t0-price-to-beat-ptb-resolver)** — gets the **opening Price To Beat at T0**, in real time, the instant a window opens (not after settlement). Polymarket's API doesn't expose the PTB for crypto Up/Down markets; this resolves it from the same Chainlink oracle stream and Binance candles the platform settles against. The one piece most Up/Down bots get stuck on.
+
+Both are standalone Python, documented in English + Chinese, with a 14-day fix-or-refund guarantee.
+
 ## License
 
 Do whatever you like with it. Attribution appreciated, not required.
